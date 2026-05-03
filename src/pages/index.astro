@@ -1,8 +1,54 @@
 ---
-import "../styles/global.css";
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../global.css";
+import Layout from "../layouts/Layout.astro";
+import NavbarAstroComponent from "../components/sections/Navbar.astro";
+---
 
 <Layout>
-	<Welcome />
-</Layout>
+    <NavbarAstroComponent>
+    </NavbarAstroComponent>
+    {/* Hero — the Stoic monolith */}
+    <section aria-labelledby="hero-heading" class="relative border-b">
+        <div
+            class="absolute inset-0 grid-bg opacity-[0.35] pointer-events-none"
+        >
+        </div>
+        <div class="relative mx-auto max-w-5xl px-6 py-24 md:py-40">
+            <h1
+                id="hero-heading"
+                class="mt-8 font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight"
+            >
+                I build software
+                <br />
+                <span class="italic text-muted-foreground">slowly,</span
+                >{" "}
+                on purpose.
+            </h1>
+
+            <p
+                class="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground"
+            >
+                An engineering practice grounded in restraint, auditability,
+                and the belief that the most useful systems are the ones you
+                can still understand a year later.
+            </p>
+
+            <div
+                class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-xs uppercase tracking-[0.2em]"
+            >
+                <a
+                    href="/projects"
+                    class="border-b border-foreground pb-0.5 hover:opacity-70"
+                >
+                    Read the projects →
+                </a>
+                <a
+                    href="/journal"
+                    class="border-b border-border pb-0.5 hover:border-foreground"
+                >
+                    Read the journal →
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>;
