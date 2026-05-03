@@ -2,11 +2,12 @@
 import "../global.css";
 import Layout from "../layouts/Layout.astro";
 import NavbarAstroComponent from "../components/sections/Navbar.astro";
+import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
+
 ---
 
 <Layout>
-    <NavbarAstroComponent>
-    </NavbarAstroComponent>
+    <NavbarAstroComponent/>
     {/* Hero — the Stoic monolith */}
     <section aria-labelledby="hero-heading" class="relative border-b">
         <div
@@ -50,5 +51,12 @@ import NavbarAstroComponent from "../components/sections/Navbar.astro";
                 </a>
             </div>
         </div>
+    </section>
+    
+    <section class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+    </section>
+    
+    <section>
+        <BehaviorAstroComponent />
     </section>
 </Layout>;

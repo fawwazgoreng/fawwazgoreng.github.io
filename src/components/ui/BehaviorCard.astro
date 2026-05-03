@@ -1,0 +1,49 @@
+---
+export interface Props {
+  type: string;
+  title1: string;
+  title2?: string;
+  description: string;
+  reason: string;
+  index?: number;
+}
+
+const {
+  type,
+  title1,
+  title2,
+  description,
+  reason,
+  index = 0
+} = Astro.props;
+---
+
+<article class="hairline bg-card p-8 md:p-10">
+  <header class="mb-6 flex items-center justify-between">
+    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+      // doctrine.{index}
+    </span>
+    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+      {type}
+    </span>
+  </header>
+
+  <h2 class="font-serif text-3xl md:text-4xl leading-tight">
+    {title1}
+    <br />
+    {title2 && (
+      <span class="italic text-muted-foreground">{title2}</span>
+    )}
+  </h2>
+
+  <p class="mt-6 max-w-prose text-sm leading-relaxed text-muted-foreground">
+    {description}
+  </p>
+
+  <footer class="mt-8 flex items-center gap-3 border-t pt-4">
+    <span class="h-px w-6 bg-border" />
+    <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+      {reason}
+    </span>
+  </footer>
+</article>
