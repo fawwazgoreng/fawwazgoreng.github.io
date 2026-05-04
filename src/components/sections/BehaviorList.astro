@@ -1,6 +1,6 @@
 ---
 import BehaviorCardAstroComponent from "../ui/BehaviorCard.astro";
-import { getEntry , getCollection } from "astro:content";
+import { getEntry } from "astro:content";
 
 export type BehaviorCardType = {
     type: string;
@@ -10,22 +10,16 @@ export type BehaviorCardType = {
     reason: string;
 };
 
-const allEntries = await getCollection("behavior");
-console.log("Daftar file di koleksi behavior:", allEntries);
+const entry = await getEntry("behavior" , "data");
 
-const entry = await getEntry("behavior", "data");
-console.log("Hasil getEntry:", entry);
+if (!entry) {
+    throw new Error("Behavior data not found");
+}
 
-// const entry = await getEntry("behavior" , "data");
-
-// if (!entry) {
-//     throw new Error("Behavior data not found");
-// }
-
-// const data: BehaviorCardType[] = entry.data;
+const data: BehaviorCardType[] = entry.data.items;
 ---
 
-<!-- {
+{
     data.map((item, i) => {
         return (
             <div class="mx-auto max-w-5xl px-6 py-8 md:py-10">
@@ -33,4 +27,4 @@ console.log("Hasil getEntry:", entry);
             </div>
         );
     })
-} -->
+}
