@@ -1,0 +1,23 @@
+{
+    "slug": "myArticle",
+    "title": "myArticle",
+    "description": "A modern blog platform built with Nuxt 3 (Frontend) and Hono (Backend API).\nUses PostgreSQL as the main database and Redis for caching and view counters.",
+    "status": "In-Progress",
+    "techStack": ["typescript", "hono", "redis" , "postgresql" , "elasticsearch"],
+    "repoUrl": "https://github.com/fawwazgoreng/myArticle",
+    "body": "This blog is built as a system, not a stream. Each article is written with intent — to clarify thought, not to chase attention. The structure favors readability, the design removes distraction, and the performance remains consistent under use.",
+    "star": {
+        "situation": "I set out to build a full blog platform using Nuxt and Hono, aiming to handle real-world concerns such as caching, rate limiting, and structured APIs. However, my initial approach lacked a stable plan, causing friction during development.",
+        "task": "Learn how to design and implement a complete system — from frontend to backend — with clear separation of concerns, reliable data flow, and maintainable structure.",
+        "action": "I iterated through multiple architectural approaches, refining how the frontend communicates with the API, how data is modeled in PostgreSQL, and how Redis is used for caching and view tracking. I implemented RESTful patterns, enforced structure in routing and services, and gradually stabilized the system by removing unnecessary complexity and aligning components with their responsibilities.",
+        "result": "The system evolved from inconsistency into a structured application with clear boundaries between layers. More importantly, I gained practical understanding of system design — not from theory, but from correcting flawed decisions. The result is not just a working platform, but a clearer approach to building the next one."
+    },
+    "technicalFailures": [
+        {
+            "title": "Unstable Architecture",
+            "what": "I approached the system without a clear architectural direction, leading to frequent changes in structure, inconsistent patterns, and repeated rewrites across both frontend and backend.",
+            "why": "Planning was treated as optional. I moved directly into implementation without defining boundaries, responsibilities, or long-term structure.",
+            "lesson": "Architecture is not discovered mid-build. Decide the shape early, or rebuild it repeatedly later."
+        }
+    ]
+}

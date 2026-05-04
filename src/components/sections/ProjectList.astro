@@ -1,5 +1,6 @@
 ---
 import ProjectCardAstroComponent from "../ui/ProjectCard.astro";
+import { getCollection } from "astro:content";
 
 export type ProjectCardType = {
     title: string;
@@ -8,14 +9,20 @@ export type ProjectCardType = {
     techStack: string[]
 };
 
-const data : ProjectCardType[] = [];
+const projects = await getCollection("projects");
+const data : ProjectCardType[] = projects.map((project) => ({
+    title: project.data.title,
+    description: project.data.description,
+    status: project.data.status,
+    techStack: project.data.techStack,
+}));
 
 ---
 
 {
     data.map((item, i) => {
         return (
-            <div class="mx-auto max-w-5xl px-6 py-8 md:py-10">
+            <div class="mx-auto max-w-5xl px-6">
                 <ProjectCardAstroComponent {...item} index={i} />
             </div>
         );

@@ -1,0 +1,23 @@
+{
+    "slug": "meditation",
+    "title": "Meditation",
+    "description": "Stoic-inspired GitHub statistics generator.",
+    "status": "Stable",
+    "techStack": ["typescript", "hono", "vercel"],
+    "repoUrl": "https://github.com/fawwazgoreng/meditation",
+    "body": "A serverless API that generates embeddable SVG stat cards for GitHub profiles. Built with Hono and deployed on Vercel. Inspired by manhwa titles and stoic philosophy.",
+    "star": {
+        "situation": "I depended on an external GitHub stats generator for my profile, but it frequently went down or became unreliable. The dependency introduced uncertainty into something that should remain stable.",
+        "task": "Build a self-controlled, serverless API that generates GitHub stat cards reliably, with predictable performance and full ownership over behavior and design.",
+        "action": "I designed a minimal API using Hono, separating concerns between data fetching, caching, SVG generation, and theming. I implemented in-memory caching to reduce repeated GitHub API calls, structured endpoints for clarity, and ensured each response is deterministic. The system was built to remain simple, observable, and easy to maintain.",
+        "result": "The system no longer depends on external availability. Stat cards are consistently accessible, performance remains stable under normal load, and failures are contained within a system I control. Reliability replaced convenience."
+    },
+    "technicalFailures": [
+        {
+            "title": "Single-Source Assumption",
+            "what": "I relied too heavily on a single source when studying GitHub API patterns and related protocols like gRPC, which led to misunderstandings in implementation and unnecessary complexity in early iterations.",
+            "why": "I assumed one well-written documentation source was sufficient. I did not cross-reference or validate concepts across multiple perspectives, which caused gaps in understanding.",
+            "lesson": "Documentation is a map, not the territory. Read broadly, compare sources, and verify through implementation."
+        }
+    ]
+}
