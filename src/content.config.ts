@@ -26,7 +26,6 @@ const projects = defineCollection({
         status: z.enum(["Stable", "In-Progress", "Legacy"]),
         techStack: z.array(z.string()),
         repoUrl: z.url(),
-        publishedAt: z.string(),
         body: z.string(),
         star: z.object({
             situation: z.string(),

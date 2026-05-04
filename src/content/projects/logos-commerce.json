@@ -1,0 +1,23 @@
+{
+    "slug": "Logos-commerce",
+    "title": "Logos e-commerce",
+    "description": "A microservices experiment inspired by the principle of Logos (the rational order of the universe) in Stoic philosophy.",
+    "status": "In-Progress",
+    "techStack": ["typescript", "vue", "podman", "kubernetes" , "postgresql"],
+    "repoUrl": "https://github.com/fawwazgoreng/Logos-commerce",
+    "body": "A microservices architecture built for absolute resilience. 'Order in chaos.' Driven by Logos (Universal Logic), ensuring every service stands firm, scales independently, and survives the noise of high-traffic commerce. ",
+    "star": {
+        "situation": "I myself spent a lot of time learning the concept of kubernetes and containers, and even then it was easy to forget, so I created an e-commerce that utilizes containers and kubernetes.",
+        "task": "Design a resource architecture that leverages containers and Kubernetes to create applications that run under desired state.",
+        "action": "Each service is modeled with intent, not ambition. I select the technology stack to fit the problem, not to showcase preference. Excess is a liability; simplicity survives longer. Testing is not an afterthought — unit tests define the boundaries of correctness and guard against quiet regressions.",
+        "result": "The system runs in a controlled, reproducible state, where deployments are predictable and failures are contained rather than disruptive. Services remain observable, testable, and replaceable without affecting the whole. The architecture holds under iteration — not because it is complex, but because it is disciplined. Stability is no longer assumed; it is continuously verified."
+    },
+    "technicalFailures": [
+        {
+            "title": "Schema Rewrite",
+            "what": "I designed a database schema that optimized for immediate convenience rather than long-term clarity, leading to tight coupling and fragile relationships that required a full rewrite.",
+            "why": "I prioritized speed of implementation over modeling the domain properly. Assumptions were embedded too early, and the structure could not adapt as the system evolved.",
+            "lesson": "Schema design is not scaffolding — it is foundation. Model the domain with patience, or pay for it in full later."
+        }
+    ]
+}

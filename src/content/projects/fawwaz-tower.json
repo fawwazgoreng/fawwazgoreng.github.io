@@ -1,0 +1,23 @@
+{
+    "slug": "fawwaz-tower",
+    "title": "Fawwaz Tower",
+    "description": "A cinematic dark fantasy experience inspired by Pick Me Up: Infinite Gacha. ",
+    "status": "In-Progress",
+    "techStack": ["typescript", "react", "supabase"],
+    "repoUrl": "https://github.com/fawwazgoreng/fawwaz-tower",
+    "body": "Built on Logic. Rising in Victory.\n\nA cinematic, production-quality single-page portfolio inspired by the Pick Me Up (Infinite Gacha) manhwa system, fused with Stoic philosophy. Every floor earned. Every skill forged.",
+    "star": {
+        "situation": "I set out to build FAWWAZ TOWER as a cinematic, system-driven portfolio inspired by tower ascension mechanics and stoic philosophy — where every section represents a floor, and every interaction reinforces progression and discipline.",
+        "task": "Design and implement a single-page application that delivers an immersive 'Tower Ascension' experience, integrating system UI elements, performance-conscious design, and a coherent philosophical identity.",
+        "action": "I structured the application into layered 'floors' to reflect progression, implemented system-driven components such as Tower Mode, Hall of Echoes, and a cinematic audio player, and enforced a zero-image design using CSS-driven visuals. Each element was built to serve both performance and narrative, ensuring the interface remained responsive, consistent, and purposeful.",
+        "result": "The project stands as a cohesive system rather than a collection of features. Navigation reflects progression, interaction reinforces immersion, and performance remains stable through constraint-driven design. The tower communicates its philosophy clearly — not through excess, but through structure and discipline."
+    },
+    "technicalFailures": [
+        {
+            "title": "Color Misalignment",
+            "what": "I chose colors based on what looked impressive in isolation, resulting in a visually inconsistent interface that weakened the dark fantasy and stoic identity of the tower.",
+            "why": "I treated color as decoration rather than as a system. There was no constraint, no hierarchy, and no alignment with the core theme.",
+            "lesson": "Color is not chosen — it is assigned. It must serve structure, mood, and clarity, or it becomes noise."
+        }
+    ]
+}
