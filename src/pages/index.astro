@@ -3,11 +3,10 @@ import "../global.css";
 import Layout from "../layouts/Layout.astro";
 import NavbarAstroComponent from "../components/sections/Navbar.astro";
 import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
-
 ---
 
 <Layout>
-    <NavbarAstroComponent/>
+    <NavbarAstroComponent />
     {/* Hero — the Stoic monolith */}
     <section aria-labelledby="hero-heading" class="relative border-b">
         <div
@@ -15,23 +14,27 @@ import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
         >
         </div>
         <div class="relative mx-auto max-w-5xl px-6 py-24 md:py-40">
+            <p
+                class="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase"
+            >
+                // -- build in open
+            </p>
             <h1
                 id="hero-heading"
                 class="mt-8 font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight"
             >
                 I build software
                 <br />
-                <span class="italic text-muted-foreground">slowly,</span
-                >{" "}
+                <span class="italic text-muted-foreground">slowly,</span>{" "}
                 on purpose.
             </h1>
 
             <p
                 class="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground"
             >
-                An engineering practice grounded in restraint, auditability,
-                and the belief that the most useful systems are the ones you
-                can still understand a year later.
+                An engineering practice grounded in restraint, auditability, and
+                the belief that the most useful systems are the ones you can
+                still understand a year later.
             </p>
 
             <div
@@ -52,11 +55,36 @@ import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
             </div>
         </div>
     </section>
-    
-    <section class="mx-auto max-w-5xl px-6 py-20 md:py-28">
-    </section>
-    
-    <section>
+
+    <section class="mx-auto max-w-5xl px-6 py-20 md:py-28"></section>
+
+    <section class="border-b">
         <BehaviorAstroComponent />
     </section>
-</Layout>;
+
+    <section aria-labelledby="projects-heading">
+        <div class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+            <header class="mb-10 flex items-end justify-between">
+                <div>
+                    <p
+                        class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+                    >
+                        // selected.work
+                    </p>
+                    <h2
+                        id="projects-heading"
+                        class="mt-2 font-serif text-3xl md:text-4xl"
+                    >
+                        Selected Projects
+                    </h2>
+                </div>
+                <a
+                    href="/projects"
+                    class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
+                >
+                    Index →
+                </a>
+            </header>
+        </div>
+    </section>
+</Layout>

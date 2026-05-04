@@ -1,0 +1,23 @@
+---
+import ProjectCardAstroComponent from "../ui/ProjectCard.astro";
+
+export type ProjectCardType = {
+    title: string;
+    description: string;
+    status: "Stable" | "In-Progress" | "Legacy";
+    techStack: string[]
+};
+
+const data : ProjectCardType[] = [];
+
+---
+
+{
+    data.map((item, i) => {
+        return (
+            <div class="mx-auto max-w-5xl px-6 py-8 md:py-10">
+                <ProjectCardAstroComponent {...item} index={i} />
+            </div>
+        );
+    })
+}

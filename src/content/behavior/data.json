@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Honesty",
+        "title1": "Software is a record of decisions.",
+        "title2": "I document the wrong ones too.",
+        "description":
+            "Every project on this site lists its technical failures alongside its outcomes — the migration that locked the table, the abstraction I removed twelve months later, the metric I optimized for the wrong reason. Pretending otherwise is a debt I refuse to carry.",
+        "reason": "Transparency is a load-bearing feature"
+    },
+    {
+        "type": "Maintenance",
+        "title1": "Systems decay by default.",
+        "title2": "I assume entropy, not stability.",
+        "description":
+            "Code that works today is already drifting from its intent. Dependencies age, assumptions rot, and temporary decisions harden into architecture. Every project here includes the cost of keeping it alive — the refactors that removed cleverness, the features cut to preserve clarity, the parts rewritten not because they broke, but because they aged poorly.",
+        "reason": "Longevity is enforced, not assumed"
+    },
+    {
+        "type": "Antifragile",
+        "title1": "I do not aim to endure.",
+        "title2": "I aim to improve under stress.",
+        "description":
+            "Breakage is signal, not failure. Pressure reveals weak abstractions, false assumptions, and misplaced priorities. Every project here carries the marks of that process — the rollback that clarified direction, the constraint that forced a simpler design, the iteration that replaced stubbornness with precision.",
+        "reason": "Growth is built through stress, not avoided"
+    }
+]
