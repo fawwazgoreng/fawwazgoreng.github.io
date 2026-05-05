@@ -2,38 +2,42 @@
 import ProjectCardAstroComponent from "../ui/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
-type props = {
-    limit?: number;
+type Props = {
+    limit: number;
 };
 
-const { limit = 5 } = Astro.props;
+const { limit = 5 } = Astro.props as Props;
 
 export type ProjectCardType = {
     title: string;
     slug: string;
     description: string;
     status: "Stable" | "In-Progress" | "Legacy";
-    techStack: string[]
+    techStack: string[];
 };
 
 const projects = await getCollection("projects");
-const data : ProjectCardType[] = projects.map((project) => ({
+const data: ProjectCardType[] = projects.map((project) => ({
     title: project.data.title,
     slug: project.slug,
     description: project.data.description,
     status: project.data.status,
     techStack: project.data.techStack,
 }));
-
 ---
 
-{
-    data.map((item, i) => {
-        if (limit && i >= limit) return null;
-        return (
-            <div class="mx-auto max-w-5xl px-6">
-                <ProjectCardAstroComponent {...item} index={i} />
-            </div>
-        );
-    })
-}
+<section aria-labelledby="projects-heading" class="border-t">
+    <ol class="divide-y">
+        {
+            data.map((item, i) => {
+                if (i < limit) {
+                    return (
+                        <div class="mx-auto max-w-5xl px-6">
+                            <ProjectCardAstroComponent {...item} index={i} />
+                        </div>
+                    );
+                }
+            })
+        }
+    </ol>
+</section>

@@ -1,0 +1,25 @@
+---
+import "../../global.css";
+import Layout from "../../layouts/Layout.astro";
+import NavbarAstroComponent from "../../components/sections/Navbar.astro";
+import JournalListAstroComponent from "../../components/sections/JournalList.astro";
+---
+
+<Layout>
+    <NavbarAstroComponent />
+    <section class="mx-auto max-w-3xl px-6 py-20 md:py-28 ">
+        <header class="mb-12">
+            <p
+                class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+            >
+                // index.journal
+            </p>
+            <h1 class="mt-2 font-serif text-4xl md:text-5xl">Journal</h1>
+            <p class="mt-4 text-sm text-muted-foreground max-w-prose">
+                Reasoning out loud. Short entries on engineering, design, and the
+                decisions I keep making until they stick.
+            </p>
+        </header>
+        <JournalListAstroComponent limit={20} />
+    </section>
+</Layout>
