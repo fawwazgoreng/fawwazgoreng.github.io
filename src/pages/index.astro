@@ -1,5 +1,4 @@
 ---
-import "../global.css";
 import Layout from "../layouts/Layout.astro";
 import NavbarAstroComponent from "../components/sections/Navbar.astro";
 import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
@@ -87,13 +86,13 @@ import JournalListAstroComponent from "../components/sections/JournalList.astro"
                     Index →
                 </a>
             </header>
-            <ProjectListAstroComponent />
+            <ProjectListAstroComponent limit={5}/>
         </div>
     </section>
     
     <section class="border-t">
       <div class="mx-auto max-w-5xl px-6 py-20 md:py-28">
-          <JournalListAstroComponent/>
+          <JournalListAstroComponent limit={5}/>
       </div>
     </section>
 </Layout>

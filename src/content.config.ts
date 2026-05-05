@@ -27,6 +27,7 @@ const projects = defineCollection({
         techStack: z.array(z.string()),
         repoUrl: z.url(),
         body: z.string(),
+        liveUrl: z.url().optional(),
         star: z.object({
             situation: z.string(),
             task: z.string(),

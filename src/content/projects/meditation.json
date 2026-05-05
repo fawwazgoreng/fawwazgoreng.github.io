@@ -2,6 +2,7 @@
     "slug": "meditation",
     "title": "Meditation",
     "description": "Stoic-inspired GitHub statistics generator.",
+    "liveUrl": "https://meditation-cyan.vercel.app",
     "status": "Stable",
     "techStack": ["typescript", "hono", "vercel"],
     "repoUrl": "https://github.com/fawwazgoreng/meditation",
