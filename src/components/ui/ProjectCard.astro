@@ -1,6 +1,7 @@
 ---
 export interface Props {
   title: string;
+  slug: string;
   description: string;
   index?: number;
   status: "Stable" | "In-Progress" | "Legacy";
@@ -9,6 +10,7 @@ export interface Props {
 
 const {
   title,
+  slug,
   description,
   index = 0,
   status = "In-Progress",
@@ -18,7 +20,7 @@ const {
 
 <li class="border-b">
     <a
-        href={`/projects/${index + 1}`}
+        href={`/projects/${slug}`}
         class="group grid grid-cols-12 items-baseline gap-4 px-1 py-8 hover:bg-accent/30"
     >
         <span

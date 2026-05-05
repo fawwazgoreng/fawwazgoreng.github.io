@@ -4,7 +4,12 @@
             href="/"
             class="font-serif text-base tracking-tight hover:opacity-80"
         >
-            <span class="italic">Home</span>
+            <span class:list={["italic", {
+                "text-foreground":
+                    Astro.url.pathname === "/",
+                "text-muted-foreground":
+                    Astro.url.pathname !== "/",
+            }]}>Home</span>
         </a>
 
         <nav aria-label="Primary" class="flex items-center gap-6">

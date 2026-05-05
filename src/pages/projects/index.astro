@@ -1,0 +1,28 @@
+---
+import "../../global.css";
+import Layout from "../../layouts/Layout.astro";
+import NavbarAstroComponent from "../../components/sections/Navbar.astro";
+import ProjectListAstroComponent from "../../components/sections/ProjectList.astro";
+---
+
+<Layout>
+    <NavbarAstroComponent />
+    <section class="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <header class="mb-12">
+            <p
+                class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+            >
+                // index.projects
+            </p>
+            <h1 class="mt-2 font-serif text-4xl md:text-5xl">Projects</h1>
+            <p class="mt-4 text-sm text-muted-foreground max-w-prose">
+                Each entry follows the STAR method and ends with a list of the
+                things I got wrong. That section isn't optional.
+            </p>
+        </header>
+
+        <ol class="border-t">
+            <ProjectListAstroComponent limit={10} />
+        </ol>
+    </section>
+</Layout>
