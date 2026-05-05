@@ -13,13 +13,11 @@ export type ProjectCardType = {
     title: string;
     publishedAt: string;
     excerpt: string;
-    body: string;
-    tags: string[];
 };
 
 const journal = await getCollection("journal");
 const data: ProjectCardType[] = journal.map((item) => ({
-    slug: item.slug,
+    slug: item.data.slug,
     title: item.data.title,
     publishedAt: item.data.publishedAt,
     excerpt: item.data.excerpt,

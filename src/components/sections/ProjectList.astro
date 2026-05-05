@@ -19,7 +19,7 @@ export type ProjectCardType = {
 const projects = await getCollection("projects");
 const data: ProjectCardType[] = projects.map((project) => ({
     title: project.data.title,
-    slug: project.slug,
+    slug: project.data.slug,
     description: project.data.description,
     status: project.data.status,
     techStack: project.data.techStack,
