@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import NavbarAstroComponent from "../components/sections/Navbar.astro";
 import BehaviorAstroComponent from "../components/sections/BehaviorList.astro";
 import ProjectListAstroComponent from "../components/sections/ProjectList.astro";
+import JournalListAstroComponent from "../components/sections/JournalList.astro";
 ---
 
 <Layout>
@@ -86,7 +87,13 @@ import ProjectListAstroComponent from "../components/sections/ProjectList.astro"
                     Index →
                 </a>
             </header>
-            <ProjectListAstroComponent></ProjectListAstroComponent>
+            <ProjectListAstroComponent />
         </div>
+    </section>
+    
+    <section class="border-t">
+      <div class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+          <JournalListAstroComponent/>
+      </div>
     </section>
 </Layout>

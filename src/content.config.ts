@@ -44,4 +44,16 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { behavior, projects };
+const journal = defineCollection({
+    loader: glob({ pattern: "**/*.json", base: "./src/content/journal" }),
+    schema: z.object({
+        slug: z.string(),
+        title: z.string(),
+        publishedAt: z.string(),
+        excerpt: z.string(),
+        body: z.string(),
+        tags: z.array(z.string()),
+    }),
+});
+
+export const collections = { behavior, projects, journal };

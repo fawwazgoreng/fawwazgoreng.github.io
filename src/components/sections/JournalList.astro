@@ -1,0 +1,46 @@
+---
+import JournalCardAstroComponent from "../ui/JournalCard.astro";
+import { getCollection } from "astro:content";
+
+export type ProjectCardType = {
+    slug: string;
+    title: string;
+    publishedAt: string;
+    excerpt: string;
+    body: string;
+    tags: string[];
+};
+
+const journal = await getCollection("journal");
+const data: ProjectCardType[] = journal.map((item) => ({
+    slug: item.slug,
+    title: item.data.title,
+    publishedAt: item.data.publishedAt,
+    excerpt: item.data.excerpt,
+}));
+---
+
+<section aria-labelledby="projects-heading" class="border-t">
+    <header class="flex items-center justify-between border-b px-6 py-4">
+        <h2
+            id="logos-heading"
+            class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+        >
+            // logos.feed
+        </h2>
+        <a
+            href="/journal"
+            class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground"
+        >
+            All entries →
+        </a>
+    </header>
+
+    <ol class="divide-y">
+        {
+            data.map((item, i) => {
+                return <JournalCardAstroComponent {...item} />
+            })
+        }
+    </ol>
+</section>
