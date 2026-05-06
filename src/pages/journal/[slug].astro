@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarAstroComponent from "../../components/sections/Navbar.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const allJournal = await getCollection("journal");
+    return allJournal.map((item) => ({
+        params: { slug: item.data.slug },
+        props: { journal: item },
+    }));
+}
+
+const { journal: selectedJournal } = Astro.props;
+const { slug } = Astro.params;
+
+---
+
+{selectedJournal ? (
+<Layout>
+    <NavbarAstroComponent />
+    <article class="mx-auto max-w-3xl px-6 py-16 md:py-24">
+        <header class="mb-12">
+            <div class="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em]">
+                <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight">
+                    {selectedJournal.data.title}
+                </h1>
+                <span class="text-muted-foreground">/</span>
+                <span class="text-foreground">
+                    {selectedJournal.data.publishedAt}
+                </span>
+            </div>
+            <p class="mt-6 max-w-2xl text-base text-muted-foreground">
+                {selectedJournal.data.excerpt}
+            </p>
+
+            <ul class="mt-8 flex flex-wrap gap-x-2 gap-y-2 font-mono text-[11px]">
+                {selectedJournal.data.tags.map((t) => (
+                    <li class="hairline px-2 py-0.5 text-muted-foreground">
+                        {t}
+                    </li>
+                ))}
+            </ul>
+        </header>
+        <section class="border-t py-10">
+            <h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+                // description
+            </h2>
+            <div class="font-serif text-lg leading-relaxed text-foreground/90 whitespace-pre-line">
+                {selectedJournal.data.body}
+            </div>
+        </section>
+    </article>
+</Layout>
+) : (
+<div class="mx-auto max-w-2xl px-6 py-24 text-center">
+    <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+        404 / journal
+    </p>
+    <h1 class="mt-3 font-serif text-4xl">No journal named “{slug}”.</h1>
+    <a
+        href="/journals"
+        class="mt-6 inline-block border-b border-foreground pb-0.5 font-mono text-xs uppercase tracking-[0.2em]"
+    >
+        Back to journals →
+    </a>
+</div>
+)}
