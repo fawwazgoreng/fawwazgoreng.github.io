@@ -24,6 +24,12 @@
             "what": "I stopped testing once the system appeared to work. I forgot the principle that everything should be assumed broken until proven otherwise.",
             "why": "I treated testing as optional. I did not prioritize it and viewed it as an afterthought.",
             "lesson": "Testing is not a separate activity. Integrate it into development with clear goals and expectations."
+        },
+        {
+            "title": "Complexity in Pipelines",
+            "what": "I did not separate complexity from the main codebase.",
+            "why": "I added new files to the codebase whenever tasks differed, instead of isolating them.",
+            "lesson": "In complex applications, separate CI and CD pipelines. Manage complexity outside the core codebase."
         }
     ]
 }
