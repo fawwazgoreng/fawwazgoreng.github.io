@@ -18,6 +18,12 @@
             "what": "I approached the system without a clear architectural direction, leading to frequent changes in structure, inconsistent patterns, and repeated rewrites across both frontend and backend.",
             "why": "Planning was treated as optional. I moved directly into implementation without defining boundaries, responsibilities, or long-term structure.",
             "lesson": "Architecture is not discovered mid-build. Decide the shape early, or rebuild it repeatedly later."
+        },
+        {
+            "title": "Unfinished Testing",
+            "what": "I stopped testing once the system appeared to work. I forgot the principle that everything should be assumed broken until proven otherwise.",
+            "why": "I treated testing as optional. I did not prioritize it and viewed it as an afterthought.",
+            "lesson": "Testing is not a separate activity. Integrate it into development with clear goals and expectations."
         }
     ]
 }
