@@ -30,6 +30,12 @@
             "what": "I did not separate complexity from the main codebase.",
             "why": "I added new files to the codebase whenever tasks differed, instead of isolating them.",
             "lesson": "In complex applications, separate CI and CD pipelines. Manage complexity outside the core codebase."
+        },
+        {
+            "title": "Inconsistent Database Schema",
+            "what": "I used inconsistent database schema across environments.",
+            "why": "I did not standardize the schema across environments, leading to inconsistencies.",
+            "lesson": "Use a consistent database schema across environments to avoid inconsistencies."
         }
     ]
 }
