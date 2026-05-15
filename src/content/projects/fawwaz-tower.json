@@ -18,6 +18,12 @@
             "what": "I chose colors based on what looked impressive in isolation, resulting in a visually inconsistent interface that weakened the dark fantasy and stoic identity of the tower.",
             "why": "I treated color as decoration rather than as a system. There was no constraint, no hierarchy, and no alignment with the core theme.",
             "lesson": "Color is not chosen — it is assigned. It must serve structure, mood, and clarity, or it becomes noise."
+        },
+        {
+            "title": "Misunderstanding Supabase Oauth",
+            "what": "I misunderstood how Supabase Oauth works, leading to unexpected behavior and errors coming from the OAuth flow.",
+            "why": "I did not fully understand the OAuth flow and how it interacts with Supabase.",
+            "lesson": "taking care to unserstanding core concepts of OAuth spend less time debugging and more time building reliable authentication flows."
         }
     ]
 }
