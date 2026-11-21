@@ -1,0 +1,28 @@
+{
+    "slug": "fadarosi",
+    "title": "Fadarosi",
+    "description": "A cinematic dark fantasy experience inspired by Pick Me Up: Infinite Gacha. ",
+    "status": "Completed",
+    "techStack": [
+        "typescript",
+        "react",
+        "midtrans",
+        "industry"
+    ],
+    "repoUrl": "https://github.com/fawwazgoreng/laundry",
+    "body": "Built on Demand. Rising with precision.\n\n Production-quality single-page inspired by Close-knit family-owned small business, fused with Stoic philosophy. For the nature. For the customers.",
+    "star": {
+        "situation": "I set out to build FADAROSI as a necessity of globalization, system project inspired by indonesian.",
+        "task": "Design and implement a single-page application that delivers an immersive 'Clean' experience, integrating system UI elements, performance-conscious design, business logic working normally and suitable,and a coherent philosophical identity.",
+        "action": "I structured the application with hybrid architecture and CQRS (Commands Queries Responsibility Segregation) archtecture, clean architecture use to separate business logic, database, usecase, and usecase, while CQRS use to separate read and write function in order to cleaning code.",
+        "result": "The project stands as a cohesive system with many collection of features. Simple and navigation reflect the ordering process and the final result, interactive real-time information, quick performance, and architecture that ready to deploy. The system itself is representation of philosophy clearly — clean and not much useless ornament, with simple behavior."
+    },
+    "technicalFailures": [
+        {
+            "title": "Inappropriate Architecture",
+            "what": "I chose arsitecture based on what i have done with various recent project, resulting in a hierarchy that doesn't separate business and public logic.",
+            "why": "I treated architecutre as decoration rather than as a system. no hierarchy, and no clarity regarding the system.",
+            "lesson": "Architecutre is not just directory — it is assigned. It must serve structure, and clarity, or it becomes problem."
+        }
+    ]
+}
